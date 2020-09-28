@@ -19,7 +19,7 @@ targets:
       base:
         TARGETED_DEVICE_FAMILY: 1
         DEVELOPMENT_TEAM: AV9FQ3YF56
-        PRODUCT_BUNDLE_IDENTIFIER: com.tomoki-sun.app.ios.template
+        PRODUCT_BUNDLE_IDENTIFIER: com.tomoki-sun.app.ios.Recipe
       configs:
         Debug:
           CODE_SIGN_IDENTITY: iPhone Developer
@@ -27,14 +27,14 @@ targets:
         Release:
           CODE_SIGN_IDENTITY: iPhone Distribution
           INFOPLIST_FILE: Recipe/Resources/Info/Release.plist
-  TemplateTests:
+  RecipeTests:
     type: bundle.unit-test
     platform: iOS
     sources:
-      - path: TemplateTests
+      - path: RecipeTests
     dependencies:
       - target: Recipe
     scheme:
       gatherCoverageData: true
       testTargets:
-        - TemplateTests
+        - RecipeTests

@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Template
+@testable import Recipe
 
 class RootViewControllerTests: XCTestCase {
     func testInit() {

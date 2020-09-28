@@ -1,4 +1,4 @@
-name: Template
+name: Recipe
 fileGroups:
   - README.md
 options:
@@ -8,12 +8,12 @@ config:
   Debug: debug
   Release: release
 targets:
-  Template:
+  Recipe:
     type: application
     platform: iOS
     developmentTarget: 13.0
     sources:
-      - path: Template
+      - path: Recipe
     scheme: {}
     settings:
       base:
@@ -23,17 +23,17 @@ targets:
       configs:
         Debug:
           CODE_SIGN_IDENTITY: iPhone Developer
-          INFOPLIST_FILE: Template/Resources/Info/Debug.plist
+          INFOPLIST_FILE: Recipe/Resources/Info/Debug.plist
         Release:
           CODE_SIGN_IDENTITY: iPhone Distribution
-          INFOPLIST_FILE: Template/Resources/Info/Release.plist
+          INFOPLIST_FILE: Recipe/Resources/Info/Release.plist
   TemplateTests:
     type: bundle.unit-test
     platform: iOS
     sources:
       - path: TemplateTests
     dependencies:
-      - target: Template
+      - target: Recipe
     scheme:
       gatherCoverageData: true
       testTargets:
